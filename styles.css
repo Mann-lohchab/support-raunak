@@ -1,0 +1,282 @@
+:root {
+    --bg: #F8F8F6;
+    --bg-soft: #F1F3F5;
+    --card: #FFFFFF;
+
+    --text: #1F2933;
+    --text-soft: #52606D;
+
+    --accent: #3E6C8F;
+    --accent-soft: #E6EEF4;
+
+    --border: #E4E7EB;
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
+
+    --shadow-soft: 0 6px 18px rgba(0,0,0,0.04);
+    --shadow-subtle: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* TYPOGRAPHY */
+h1, h2 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    margin-bottom: 1.8rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+.container {
+    width: 92%;
+    max-width: 860px;
+    margin: auto;
+}
+
+.narrow {
+    max-width: 640px;
+}
+
+.center {
+    text-align: center;
+}
+
+.muted {
+    color: var(--text-soft);
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+/* SECTION SPACING — improved for mobile rhythm */
+.section {
+    padding: 4rem 0;
+}
+
+.section.light {
+    background: var(--bg-soft);
+}
+
+/* HEADER */
+.header {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    padding: 6.5rem 0 5rem;
+    text-align: center;
+}
+
+.hero-intro {
+    font-style: italic;
+    color: var(--text-soft);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.hero-sub {
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+}
+
+/* BUTTON */
+.primary-btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    background: var(--accent);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* CARD */
+.card {
+    background: var(--card);
+    padding: 2.2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+}
+
+/* PHOTO BLOCK */
+.photo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
+}
+
+.photo {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+.photo.primary {
+    max-width: 420px;
+}
+
+.photo.secondary {
+    max-width: 300px;
+    opacity: 0.95;
+}
+
+/* DONATION */
+.donation-card {
+    margin-top: 2.5rem;
+    background: var(--card);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.qr {
+    width: 210px;
+    max-width: 80%;
+}
+
+.payment-info {
+    text-align: center;
+}
+
+.payment-info p {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+.secondary-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.secondary-link:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+    background: white;
+    margin-top: 3rem;
+}
+
+.footer-message {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+/* TABLET & DESKTOP */
+@media (min-width: 768px) {
+
+    .section {
+        padding: 5.5rem 0;
+    }
+
+    .donation-card {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .payment-info {
+        text-align: left;
+    }
+
+    .photo-block {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+}
