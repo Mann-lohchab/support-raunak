@@ -270,6 +270,37 @@ p {
         gap: 3rem;
     }
 
+/* UPI DIRECT PAYMENT BUTTON */
+.upi-button {
+    display: inline-block;
+    margin: 1.4rem 0 1.6rem;
+    padding: 0.95rem 1.8rem;
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 280px;
+}
+
+.upi-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Make it slightly more comfortable on phones */
+@media (max-width: 480px) {
+    .upi-button {
+        font-size: 1.05rem;
+        padding: 1rem 1.8rem;
+    }
+}
+
+
     .payment-info {
         text-align: left;
     }
